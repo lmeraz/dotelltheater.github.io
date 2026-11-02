@@ -123,7 +123,7 @@
     }
 
     .details {
-      margin: 3.5rem 0 0;
+      margin: 2.5rem 0 0;
       border-top: 1px solid var(--rule);
     }
 
@@ -146,19 +146,8 @@
 
     .row a:hover { text-decoration-color: var(--ink); }
 
-    .free {
-      position: relative;
-      display: inline-block;
-    }
-
-    .free::after {
-      content: "";
-      position: absolute;
-      inset: -.3em -.55em;
-      border: 2px solid var(--pencil);
-      border-radius: 50% 46% 52% 44% / 58% 50% 54% 46%;
-      transform: rotate(-4deg);
-      pointer-events: none;
+    .seats {
+      margin: 0;
     }
 
     .seats-left {
@@ -167,11 +156,11 @@
     }
 
     .cta {
-      margin-top: 3rem;
+      margin-top: 2.5rem;
       display: flex;
       flex-wrap: wrap;
       align-items: center;
-      gap: 1rem 1.5rem;
+      gap: .75rem 1.5rem;
     }
 
     .button {
@@ -210,7 +199,12 @@
 
     @media (max-width: 480px) {
       body { padding-left: 0; padding-right: 0; padding-top: 0; }
-      .page { box-shadow: none; min-height: 100vh; }
+      .page { box-shadow: none; min-height: 100vh; padding-top: 32px; }
+      .presenter { margin-bottom: 2rem; }
+      .kind { margin-top: 1rem; }
+      .cta { margin-top: 1.75rem; }
+      .seats { width: 100%; text-align: center; }
+      .details { margin-top: 1.5rem; }
       .row { grid-template-columns: 1fr; gap: 0; }
       .button { width: 100%; text-align: center; }
     }
@@ -224,16 +218,10 @@
     <p class="byline">by Theresa Rebeck</p>
     <p class="note kind">a staged reading</p>
 
-    <div class="credits">
-      <p>Directed by Lesley Tsina</p>
-      <p class="with">With</p>
-      <ul class="cast">
-        <li>Luis Meraz <span class="role">as Martin</span></li>
-        <li>Emily Blackwell <span class="role">as Kate</span></li>
-        <li>Geoffrey Graeme <span class="role">as Leonard</span></li>
-        <li>Natalie Nakamine <span class="role">as Izzy</span></li>
-        <li>Cameron Auble-Branigan <span class="role">as Douglas</span></li>
-      </ul>
+    <div class="cta">
+      <a class="button" href="https://forms.gle/zif6zaYz6oXnU5x8A" target="_blank" rel="noopener">Reserve your seat</a>
+      <!-- Update the number below as people register -->
+      <p class="seats">Free to attend. Only <span class="seats-left">42</span> of 50 seats remain.</p>
     </div>
 
     <dl class="details">
@@ -247,19 +235,18 @@
           <a href="https://maps.google.com/?q=Hobgoblin+Playhouse+1516+N+Gardner+St+Los+Angeles+CA+90046" target="_blank" rel="noopener">Hobgoblin Playhouse<br>1516 N Gardner St<br>Los Angeles, CA 90046</a>
         </dd>
       </div>
-      <div class="row">
-        <dt>Tickets</dt>
-        <dd><span class="free">Free to attend</span></dd>
-      </div>
-      <div class="row">
-        <dt>Seats</dt>
-        <!-- Update the number below as people register -->
-        <dd><span class="seats-left">42</span> of 50 remaining</dd>
-      </div>
     </dl>
 
-    <div class="cta">
-      <a class="button" href="https://forms.gle/zif6zaYz6oXnU5x8A" target="_blank" rel="noopener">Reserve a seat</a>
+    <div class="credits">
+      <p>Directed by Lesley Tsina</p>
+      <p class="with">With</p>
+      <ul class="cast">
+        <li>Luis Meraz <span class="role">as Martin</span></li>
+        <li>Emily Blackwell <span class="role">as Kate</span></li>
+        <li>Geoffrey Graeme <span class="role">as Leonard</span></li>
+        <li>Natalie Nakamine <span class="role">as Izzy</span></li>
+        <li>Cameron Auble-Branigan <span class="role">as Douglas</span></li>
+      </ul>
     </div>
 
     <footer>
