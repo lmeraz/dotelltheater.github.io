@@ -1,0 +1,217 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Seminar — a staged reading | Do Tell Theater</title>
+  <meta name="description" content="Do Tell Theater presents a staged reading of Seminar by Theresa Rebeck. Saturday, December 5, 2–5 PM at the Hobgoblin Playhouse, Los Angeles. Free to attend.">
+  <meta property="og:title" content="Seminar by Theresa Rebeck — a staged reading">
+  <meta property="og:description" content="Saturday, December 5, 2–5 PM · Hobgoblin Playhouse, Los Angeles · Free to attend">
+  <meta property="og:url" content="https://dotelltheater.com/">
+  <meta property="og:type" content="website">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,400&family=Courier+Prime:ital,wght@0,400;0,700;1,400&family=Nanum+Pen+Script&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --desk: #2a3140;
+      --paper: #f3f5f6;
+      --ink: #1c2230;
+      --graphite: #5b6474;
+      --rule: #c9d3dc;
+      --pencil: #c4222f;
+    }
+
+    * { box-sizing: border-box; }
+
+    html { -webkit-text-size-adjust: 100%; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: var(--desk);
+      color: var(--ink);
+      font-family: "Courier Prime", "Courier New", monospace;
+      font-size: 1.0625rem;
+      line-height: 1.7;
+      display: flex;
+      justify-content: center;
+      padding: clamp(16px, 5vw, 64px) 16px;
+    }
+
+    .page {
+      position: relative;
+      width: 100%;
+      max-width: 44rem;
+      background: var(--paper);
+      padding: clamp(40px, 8vw, 88px) clamp(24px, 8vw, 88px) clamp(48px, 8vw, 80px);
+      box-shadow: 0 1px 0 rgba(255,255,255,.04), 0 30px 60px -20px rgba(0,0,0,.55);
+    }
+
+    .presenter {
+      margin: 0 0 3.5rem;
+      color: var(--graphite);
+    }
+
+    h1 {
+      position: relative;
+      margin: 0;
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-weight: 500;
+      font-size: clamp(3.75rem, 15vw, 8.5rem);
+      line-height: .9;
+      letter-spacing: -.02em;
+    }
+
+    .byline {
+      margin: 1rem 0 0;
+      font-family: "Bodoni Moda", Georgia, serif;
+      font-style: italic;
+      font-size: clamp(1.25rem, 3.5vw, 1.625rem);
+      line-height: 1.3;
+    }
+
+    .note {
+      font-family: "Nanum Pen Script", cursive;
+      color: var(--pencil);
+      font-size: 1.9rem;
+      line-height: 1;
+    }
+
+    .kind {
+      display: inline-block;
+      margin-top: 1.5rem;
+      transform: rotate(-3deg);
+      transform-origin: left center;
+    }
+
+    .kind::before {
+      content: "";
+      display: inline-block;
+      width: 1.6em;
+      height: 2px;
+      margin-right: .35em;
+      vertical-align: middle;
+      background: var(--pencil);
+      border-radius: 2px;
+    }
+
+    .details {
+      margin: 3.5rem 0 0;
+      border-top: 1px solid var(--rule);
+    }
+
+    .row {
+      display: grid;
+      grid-template-columns: 7.5rem 1fr;
+      gap: 1rem;
+      padding: .9rem 0;
+      border-bottom: 1px solid var(--rule);
+    }
+
+    .row dt { color: var(--graphite); }
+    .row dd { margin: 0; }
+
+    .row a {
+      color: inherit;
+      text-decoration-color: var(--rule);
+      text-underline-offset: .2em;
+    }
+
+    .row a:hover { text-decoration-color: var(--ink); }
+
+    .free {
+      position: relative;
+      display: inline-block;
+    }
+
+    .free::after {
+      content: "";
+      position: absolute;
+      inset: -.3em -.55em;
+      border: 2px solid var(--pencil);
+      border-radius: 50% 46% 52% 44% / 58% 50% 54% 46%;
+      transform: rotate(-4deg);
+      pointer-events: none;
+    }
+
+    .cta {
+      margin-top: 3rem;
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+      gap: 1rem 1.5rem;
+    }
+
+    .button {
+      display: inline-block;
+      padding: .85rem 1.6rem;
+      background: var(--ink);
+      color: var(--paper);
+      font: inherit;
+      font-weight: 700;
+      text-decoration: none;
+      border-radius: 2px;
+      transition: background-color .15s;
+    }
+
+    .button:hover { background: var(--pencil); }
+
+    a:focus-visible {
+      outline: 3px solid var(--pencil);
+      outline-offset: 3px;
+    }
+
+    .cta .note { font-size: 1.6rem; }
+
+    footer {
+      margin-top: 4.5rem;
+      font-size: .875rem;
+      color: var(--graphite);
+    }
+
+    footer p { margin: 0; }
+
+    @media (max-width: 480px) {
+      body { padding-left: 0; padding-right: 0; padding-top: 0; }
+      .page { box-shadow: none; min-height: 100vh; }
+      .row { grid-template-columns: 1fr; gap: 0; }
+      .button { width: 100%; text-align: center; }
+    }
+  </style>
+</head>
+<body>
+  <main class="page">
+    <p class="presenter">Do Tell Theater presents</p>
+
+    <h1>Seminar</h1>
+    <p class="byline">by Theresa Rebeck</p>
+    <p class="note kind">a staged reading</p>
+
+    <dl class="details">
+      <div class="row">
+        <dt>When</dt>
+        <dd>Saturday, December 5<br>2:00–5:00 PM</dd>
+      </div>
+      <div class="row">
+        <dt>Where</dt>
+        <dd>
+          <a href="https://maps.google.com/?q=Hobgoblin+Playhouse+1516+N+Gardner+St+Los+Angeles+CA+90046" target="_blank" rel="noopener">Hobgoblin Playhouse<br>1516 N Gardner St<br>Los Angeles, CA 90046</a>
+        </dd>
+      </div>
+      <div class="row">
+        <dt>Tickets</dt>
+        <dd><span class="free">Free to attend</span></dd>
+      </div>
+    </dl>
+
+    <div class="cta">
+      <a class="button" href="https://forms.gle/REPLACE_WITH_FORM_ID" target="_blank" rel="noopener">Reserve a seat</a>
+    </div>
+
+    <footer>
+      <p>Do Tell Theater · Los Angeles</p>
+    </footer>
+  </main>
+</body>
+</html>
