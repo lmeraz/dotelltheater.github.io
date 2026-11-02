@@ -20,6 +20,7 @@
       --graphite: #5b6474;
       --rule: #c9d3dc;
       --pencil: #c4222f;
+      --title-size: clamp(3.25rem, 12vw, 6.5rem);
     }
 
     * { box-sizing: border-box; }
@@ -58,17 +59,42 @@
       margin: 0;
       font-family: "Bodoni Moda", Georgia, serif;
       font-weight: 500;
-      font-size: clamp(3.75rem, 15vw, 8.5rem);
+      font-size: var(--title-size);
       line-height: .9;
       letter-spacing: -.02em;
     }
 
+    /* License requires the author credit at no less than 50% of the title size */
     .byline {
-      margin: 1rem 0 0;
+      margin: .75rem 0 0;
       font-family: "Bodoni Moda", Georgia, serif;
       font-style: italic;
-      font-size: clamp(1.25rem, 3.5vw, 1.625rem);
-      line-height: 1.3;
+      font-weight: 400;
+      font-size: calc(var(--title-size) * .5);
+      line-height: 1.1;
+    }
+
+    .credits {
+      margin: 2.75rem 0 0;
+    }
+
+    .credits p { margin: 0; }
+
+    .credits .with {
+      margin-top: 1.25rem;
+      color: var(--graphite);
+    }
+
+    .cast {
+      margin: .25rem 0 0;
+      padding: 0;
+      list-style: none;
+    }
+
+    .cast .role { color: var(--graphite); }
+
+    .license {
+      margin-top: .75rem;
     }
 
     .note {
@@ -177,6 +203,11 @@
 
     footer p { margin: 0; }
 
+    footer a {
+      color: inherit;
+      text-underline-offset: .2em;
+    }
+
     @media (max-width: 480px) {
       body { padding-left: 0; padding-right: 0; padding-top: 0; }
       .page { box-shadow: none; min-height: 100vh; }
@@ -192,6 +223,18 @@
     <h1>Seminar</h1>
     <p class="byline">by Theresa Rebeck</p>
     <p class="note kind">a staged reading</p>
+
+    <div class="credits">
+      <p>Directed by Lesley Tsina</p>
+      <p class="with">With</p>
+      <ul class="cast">
+        <li>Luis Meraz <span class="role">as Martin</span></li>
+        <li>Emily Blackwell <span class="role">as Kate</span></li>
+        <li>Geoffrey Graeme <span class="role">as Leonard</span></li>
+        <li>Natalie Nakamine <span class="role">as Izzy</span></li>
+        <li>Cameron Auble-Branigan <span class="role">as Douglas</span></li>
+      </ul>
+    </div>
 
     <dl class="details">
       <div class="row">
@@ -221,6 +264,7 @@
 
     <footer>
       <p>Do Tell Theater · Los Angeles</p>
+      <p class="license">SEMINAR is presented by arrangement with Concord Theatricals on behalf of Samuel French, Inc.<br><a href="https://www.concordtheatricals.com" target="_blank" rel="noopener">www.concordtheatricals.com</a></p>
     </footer>
   </main>
 </body>
