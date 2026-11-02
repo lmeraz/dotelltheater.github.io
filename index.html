@@ -91,7 +91,10 @@
       list-style: none;
     }
 
-    .cast .role { color: var(--graphite); }
+    .cast .role {
+      color: var(--graphite);
+      white-space: nowrap;
+    }
 
     .license {
       margin-top: .75rem;
@@ -145,6 +148,13 @@
     }
 
     .row a:hover { text-decoration-color: var(--ink); }
+
+    .add-cal {
+      margin: .5rem 0 0;
+      font-size: .875rem;
+    }
+
+    .row .add-cal a { color: var(--graphite); }
 
     .seats {
       margin: 0;
@@ -227,7 +237,13 @@
     <dl class="details">
       <div class="row">
         <dt>When</dt>
-        <dd>Saturday, December 5<br>2:00–5:00 PM</dd>
+        <dd>
+          Saturday, December 5<br>2:00–5:00 PM
+          <p class="add-cal">
+            <a href="https://calendar.google.com/calendar/render?action=TEMPLATE&amp;text=Seminar%20by%20Theresa%20Rebeck%20%E2%80%94%20a%20staged%20reading&amp;dates=20261205T140000/20261205T170000&amp;ctz=America/Los_Angeles&amp;location=Hobgoblin%20Playhouse%2C%201516%20N%20Gardner%20St%2C%20Los%20Angeles%2C%20CA%2090046&amp;details=Do%20Tell%20Theater%20presents%20a%20staged%20reading%20of%20Seminar%20by%20Theresa%20Rebeck.%20Free%20to%20attend.%0Ahttps%3A%2F%2Fdotelltheater.com" target="_blank" rel="noopener">Add to Google Calendar</a><br>
+            <a href="seminar.ics">Add to Apple / Outlook</a>
+          </p>
+        </dd>
       </div>
       <div class="row">
         <dt>Where</dt>
