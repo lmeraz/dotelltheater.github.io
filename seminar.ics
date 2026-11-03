@@ -22,22 +22,24 @@ END:DAYLIGHT
 END:VTIMEZONE
 BEGIN:VEVENT
 UID:seminar-20261205@dotelltheater.com
-DTSTAMP:20261102T000000Z
-DTSTART;TZID=America/Los_Angeles:20261205T140000
-DTEND;TZID=America/Los_Angeles:20261205T170000
+DTSTAMP:20261102T230000Z
+SEQUENCE:1
+DTSTART;TZID=America/Los_Angeles:20261205T141500
+DTEND;TZID=America/Los_Angeles:20261205T160000
 SUMMARY:Seminar by Theresa Rebeck — a staged reading
 LOCATION:Hobgoblin Playhouse\, 1516 N Gardner St\, Los Angeles\, CA 90046
 DESCRIPTION:Do Tell Theater presents a staged reading of Seminar by Theres
- a Rebeck. Free to attend.\nhttps://dotelltheater.com
+ a Rebeck. Doors 2:15 PM\, show 2:30 PM (running time 1 hour 30 minutes).
+  Free to attend.\nhttps://dotelltheater.com
 URL:https://dotelltheater.com
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Seminar is tomorrow at 2 PM
+DESCRIPTION:Seminar is tomorrow. Doors 2:15 PM\, show 2:30 PM
 TRIGGER:-P1D
 END:VALARM
 BEGIN:VALARM
 ACTION:DISPLAY
-DESCRIPTION:Seminar starts in 2 hours
+DESCRIPTION:Seminar doors open in 2 hours
 TRIGGER:-PT2H
 END:VALARM
 END:VEVENT
